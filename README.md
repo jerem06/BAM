@@ -81,10 +81,13 @@ Animer l'étoile au clic en taille et couleur :white_check_mark:
 
 [Service Météo](https://lottiefiles.com/70592-star)
 
+Pour l'animation j'ai choisi l'animation précédente à partir de la bibliothèque LottieFiles. 
+
 ## 12 : 
 
 Ajouter l'item dans les favoris au clic grâce à une gestion de state global :white_check_mark:
 
+Pour ce faire j'ai mis en place un store redux qui garde en mémoire un 'state' comprenant 2 listes : 'all_weather' et 'featured'. Lorque l'utilisateur appuis sur l'étoile cela lance l'annimation puis le nom de la ville est transféré dans la liste des 'featured' (favoris) ainsi le state est mis à jour. 
 
 ## 13 : 
 
