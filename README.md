@@ -27,7 +27,7 @@ Installer TypeScript pour typer le code : :white_check_mark:
 
 Créer un service pour fetcher des données simples depuis une API avec fetch  :white_check_mark:
 
-![alt text](https://github.com/jerem06/BAM/tree/main/src/assets/img/api.png?raw=true)
+![alt text](https://github.com/jerem06/BAM/blob/main/src/assets/img/api.png)
 
 ## 5 :
 
