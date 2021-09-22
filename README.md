@@ -23,6 +23,8 @@ Créer une appli ReactNative sans Expo :white_check_mark:
 
 Installer TypeScript pour typer le code : :white_check_mark:
 
+Seul le fichier App.tsx comprend l'extension .tsx je voudrais approfondir et mieux comprendre l'utilisation du typeScript en React Native. 
+
 ## 4 : 
 
 Créer un service pour fetcher des données simples depuis une API avec fetch  :white_check_mark:
