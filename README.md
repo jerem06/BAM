@@ -33,13 +33,20 @@ Créer un service pour fetcher des données simples depuis une API avec fetch  :
 
 Tester le service :white_check_mark:
 
+![Service Météo](https://github.com/jerem06/BAM/blob/main/src/assets/img/test2.png)
+
+On essaye de faire appel à l'API Hourly forecast à l'aide d'une requête 'fetch'. Il faut préciser le nom de la ville dont on souhaite obtenir la météo ainsi que notre clée API. Pour notre test nous allons vérifier si pour la ville de 'Grasse' nous obtenons bien 'Grasse' comme paramètre du champs 'name' dans la réponse JSON. 
+
 ![Service Météo](https://github.com/jerem06/BAM/blob/main/src/assets/img/test.png)
 
-![Service Météo](https://github.com/jerem06/BAM/blob/main/src/assets/img/test2.png)
+*NB : il est possible de 'Mock' une API pour faire des tests*
 
 ## 6 : 
 
 Installer husky pour faire tourner les tests à chaque fois qu’une branche est poussée :white_check_mark:
+
+![Service Météo](https://github.com/jerem06/BAM/blob/main/src/assets/img/husky.png)
+
 
 ## 7 : 
 
