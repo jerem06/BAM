@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Text, View, StyleSheet,TouchableOpacity, ScrollView, Button, SafeAreaView} from 'react-native';
+import { Text, View, StyleSheet,TouchableOpacity, ScrollView, Button, SafeAreaView, ImageBackground} from 'react-native';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as addedWeather from '../Redux/Actions';
@@ -38,6 +38,7 @@ class Featured extends Component {
 
     return (
       <SafeAreaView style={styles.container}>
+      <ImageBackground blurRadius={1} style={styles.image} imageStyle={{opacity:0.6}} source={require('../assets/img/weather.png')} >
         <ScrollView style={styles.scrollView}>
         {
           this.props.weather.featured.map((weather, index) => (
@@ -59,7 +60,7 @@ class Featured extends Component {
             <TouchableOpacity
             style={styles.touchableOpacity}
             >
-              <Icon name="star" color={'#ff2b2a'} size={40}/>
+              <Icon name="star" color={'#FFB600'} size={40}/>
             </TouchableOpacity>
             </View>
            
@@ -75,7 +76,7 @@ class Featured extends Component {
         </Overlay>
 
         </ScrollView>
-
+      </ImageBackground>
       </SafeAreaView>
       
 
@@ -94,8 +95,16 @@ const styles = StyleSheet.create({
    container: {
     flex: 1,
   },
+  image: {
+    flex: 1,
+    resizeMode: "cover",
+    justifyContent : 'center',
+    alignItems : 'center',
+    
+    
+  },
   scrollView: {
-    backgroundColor: '#2a7ffd',
+    //backgroundColor: '#2a7ffd',
     
   },
   view : {
@@ -103,17 +112,17 @@ const styles = StyleSheet.create({
     alignItems : 'center',
     justifyContent : 'space-between',
     padding : 2,
-    marginLeft : 30
+    marginLeft : 20
   },
   button : {
     height : '100%',
-    width : '45%',
-    backgroundColor :"#ffcc25",
+    width : '60%',
+    //backgroundColor :"#ffff",
     alignItems: "center",
     padding : 10,
     borderRadius: 10,
-    borderWidth: 1,
-    
+    //borderWidth: 0.5,
+    elevation: 5
   },
   touchableOpacity : {
     marginRight : 60

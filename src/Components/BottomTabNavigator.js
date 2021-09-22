@@ -11,9 +11,10 @@ function BottomTab(){
     <Tab.Navigator
      screenOptions={{
         tabBarActiveTintColor: '#ff2b2a',
+        
       }}>
       <Tab.Screen 
-      name="List" 
+      name="Liste des villes" 
       component={List} 
       options={{
         tabBarLabel: 'Liste',
@@ -23,7 +24,7 @@ function BottomTab(){
       
       />
       <Tab.Screen 
-      name="Featured" 
+      name="Météos Préférée !" 
       component={Featured} 
       options={{
         tabBarLabel: 'Favoris',

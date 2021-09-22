@@ -1,12 +1,13 @@
-import React, {Component} from 'react';
-import { Text, View, StyleSheet,TouchableOpacity, ScrollView, Button, SafeAreaView} from 'react-native';
+import React, {Component, useRef} from 'react';
+import { Text, View, StyleSheet,TouchableOpacity, ScrollView, Button, SafeAreaView, Animated, ImageBackground} from 'react-native';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as addedWeather from '../Redux/Actions';
 import Icon from 'react-native-vector-icons/Ionicons';  
 import {getWeather} from '../Services/Api';
 import {Overlay} from 'react-native-elements';
-
+import LottieView from 'lottie-react-native';
+import * as star from '../assets/star.json';
 
 class List extends Component {
 
@@ -16,7 +17,8 @@ class List extends Component {
     this.state = {
       data:[],
       visible: false,
-     
+      //progress: new Animated.Value(0),
+      progress : []
     };
   }
 
@@ -35,9 +37,10 @@ class List extends Component {
 
   render(){
     
-
+    
     return (
       <SafeAreaView style={styles.container}>
+      <ImageBackground blurRadius={2} style={styles.image} imageStyle={{opacity:0.6}} source={require('../assets/img/sun.jpeg')} >
         <ScrollView style={styles.scrollView}>
         {
           this.props.weather.all_weather.map((weather, index) => (
@@ -58,11 +61,28 @@ class List extends Component {
            
             <TouchableOpacity
             style={styles.touchableOpacity}
-             onPress={() =>
+             onPress={() =>{
+              let progress = this.state.progress
+              progress[index]=new Animated.Value(0)
+              this.setState({progress : progress})
+              console.log(index)
+              Animated.timing(this.state.progress[index], {
+              toValue: 1,
+              duration: 2000,
+              useNativeDriver: true,
+              }).start()
+
+              setTimeout(() => {
+                progress = this.state.progress
+                progress[index]=new Animated.Value(0)
                 this.props.actions.addedWeather(index)
+              },1500);
+              }
+                
               }
             >
-              <Icon name="star-outline" color={'#ff2b2a'} size={40}/>
+              <Icon name="star-outline" color={'#424242'} size={40}/>
+              <LottieView source={star} progress={this.state.progress[index]} />
             </TouchableOpacity>
             </View>
            
@@ -78,7 +98,7 @@ class List extends Component {
         </Overlay>
 
         </ScrollView>
-
+      </ImageBackground>
       </SafeAreaView>
       
 
@@ -98,7 +118,15 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   scrollView: {
-    backgroundColor: '#2a7ffd',
+    //backgroundColor: '#2a7ffd',
+    
+  },
+  image: {
+    flex: 1,
+    resizeMode: "cover",
+    justifyContent : 'center',
+    alignItems : 'center',
+    
     
   },
   view : {
@@ -106,16 +134,17 @@ const styles = StyleSheet.create({
     alignItems : 'center',
     justifyContent : 'space-between',
     padding : 2,
-    marginLeft : 30
+    marginLeft : 20
   },
   button : {
     height : '100%',
-    width : '45%',
-    backgroundColor :"#ffcc25",
+    width : '60%',
+    //backgroundColor :"#ffff",
     alignItems: "center",
     padding : 10,
     borderRadius: 10,
-    borderWidth: 1,
+    //borderWidth: 0.5,
+    elevation: 5
     
   },
   touchableOpacity : {
@@ -126,13 +155,17 @@ const styles = StyleSheet.create({
     justifyContent : 'center'
   },
   text : {
-    color : 'white',
+    color : 'black',
     fontWeight: 'bold',
     fontSize: 20,
   },
-   textWeather : {
+  textWeather : {
     fontWeight: 'bold',
     fontSize: 20,
+  },
+  lottie : {
+    height : '10%',
+    width : '10%',
   }
     
 });
