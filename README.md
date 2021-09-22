@@ -81,7 +81,7 @@ Afficher à droite de chacun des items de la liste une icône "étoile" :white_c
 
 Animer l'étoile au clic en taille et couleur :white_check_mark:
 
-[Service Météo](https://lottiefiles.com/70592-star)
+[Animation star](https://lottiefiles.com/70592-star)
 
 Pour l'animation j'ai choisi l'animation précédente à partir de la bibliothèque LottieFiles. 
 
