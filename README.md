@@ -52,21 +52,34 @@ Installer husky pour faire tourner les tests à chaque fois qu’une branche est
 
 Créer une première page "Liste" avec une scroll view pour afficher les résultats de l'API :white_check_mark:
 
+![Service Météo](https://github.com/jerem06/BAM/blob/main/src/assets/img/list.png)
+
 ## 8 : 
 
 Créer une deuxième page "Favoris" :white_check_mark:
+
+![Service Météo](https://github.com/jerem06/BAM/blob/main/src/assets/img/fav.png)
+
 
 ## 9 :
 
 Créer un bottom tab navigator pour naviguer avec la page de Favoris :white_check_mark:
 
+![Service Météo](https://github.com/jerem06/BAM/blob/main/src/assets/img/bottom.png)
+
+
 ## 10 : 
 
 Afficher à droite de chacun des items de la liste une icône "étoile" :white_check_mark:
 
+![Service Météo](https://github.com/jerem06/BAM/blob/main/src/assets/img/star.png)
+
+
 ## 11 : 
 
 Animer l'étoile au clic en taille et couleur :white_check_mark:
+
+
 
 ## 12 : 
 
