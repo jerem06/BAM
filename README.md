@@ -89,6 +89,8 @@ Ajouter l'item dans les favoris au clic grâce à une gestion de state global :w
 
 Pour ce faire j'ai mis en place un store redux qui garde en mémoire un 'state' comprenant 2 listes : 'all_weather' et 'featured'. Lorque l'utilisateur appuis sur l'étoile cela lance l'annimation puis le nom de la ville est transféré dans la liste des 'featured' (favoris) ainsi le state est mis à jour. 
 
+*NB : une autre piste aurait été de gérer les 'state' à l'aide d'un boolean (true/false) pour savoir si la météo fait parti des favoris*
+
 ## 13 : 
 
 Publier son appli pour android
