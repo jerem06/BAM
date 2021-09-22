@@ -11,6 +11,8 @@ Consigne :
 
 Créer un repository Git : :white_check_mark:
 
+[lien du Git](https://github.com/jerem06/BAM/)
+
 ## 2 : 
 
 Créer une appli ReactNative sans Expo :white_check_mark:
