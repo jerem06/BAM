@@ -93,5 +93,10 @@ Pour ce faire j'ai mis en place un store redux qui garde en mémoire un 'state' 
 
 ## 13 : 
 
-Publier son appli pour android
+Publier son appli pour android :white_check_mark:
+
+Contactez moi pour obtenir le .apk
+
+
+Merci pour votre lecture.
 
