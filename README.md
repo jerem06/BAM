@@ -79,7 +79,7 @@ Afficher à droite de chacun des items de la liste une icône "étoile" :white_c
 
 Animer l'étoile au clic en taille et couleur :white_check_mark:
 
-![Service Météo](https://assets6.lottiefiles.com/packages/lf20_gftyftef.json)
+![Service Météo](https://lottiefiles.com/70592-star)
 
 ## 12 : 
 
