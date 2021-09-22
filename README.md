@@ -17,7 +17,7 @@ Créer un repository Git : :white_check_mark:
 
 Créer une appli ReactNative sans Expo :white_check_mark:
 
-**npx react-native init BAM**
+**npx react-native init BamApp**
 
 ## 3 : 
 
