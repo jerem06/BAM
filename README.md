@@ -33,6 +33,10 @@ Créer un service pour fetcher des données simples depuis une API avec fetch  :
 
 Tester le service :white_check_mark:
 
+![Service Météo](https://github.com/jerem06/BAM/blob/main/src/assets/img/test.png)
+
+![Service Météo](https://github.com/jerem06/BAM/blob/main/src/assets/img/test2.png)
+
 ## 6 : 
 
 Installer husky pour faire tourner les tests à chaque fois qu’une branche est poussée :white_check_mark:
